@@ -1,8 +1,8 @@
 package Animal;
 
 public abstract class Animal {
-    private String name;
-    private int age;
+    private final String name;
+    private final int age;
     public int hunger = 100;
     public int happiness = 0;
 
