@@ -1,39 +1,40 @@
 ```mermaid
     classDiagram
-        class Animal{
-            
+        class Animal{   
+            <<abstract>>
             -String name
             -int age
             -int hunger
             -int happiness
-            +Animal(String name,int age)
+            +Animal.Animal(String name,int age)
             +getName() String
-            +makeSound() String
+            +makeSound() void
+            +eat() void
+            +sleep() void
             
         }
         class Dog{
-            +Dog(String name,int age)
-            +makeSound() String
-            +bark() String
+            +Animal.Dog(String name,int age)
+            +makeSound() void           
+            +eat() void
+            +play() void
         }
         Animal <|-- Dog
         
         class Cat{
-            +Cat(String name,int age)
-            +makeSound() String
-            +meow() String
+            +Animal.Cat(String name,int age)
+            +makeSound() void
+            +eat() void
+            +play() void
         }
         Animal <|-- Cat
         
         class Zoo{
-            <<interface>>
             +feedAnimal(Animal animal)
-            +feedAnimal(Dog dog)
-            +feedAnimal(Cat cat)
             +playWithAnimal(Animal animal)
-            +playWithAnimal(Dog dog)
-            +playWithAnimal(Cat cat)
+            +checkAnimal(Animal animal)             
         }
+        Zoo ..> Animal
         
 
 ```
