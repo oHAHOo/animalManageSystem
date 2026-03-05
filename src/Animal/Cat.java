@@ -1,11 +1,22 @@
+package Animal;
+
 public class Cat extends Animal{
 
-    Cat(String name, int age) {
+    public Cat(String name, int age) {
         super(name, age);
     }
+
     @Override
-    void makeSound() {
+    public void makeSound() {
         System.out.println("야옹!");
+    }
+    @Override
+    public void eat() {
+        hunger=hunger-1;
+    }
+    @Override
+    public void play() {
+        happiness=happiness+1;
     }
 
 }
