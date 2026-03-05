@@ -10,9 +10,9 @@
             +getName() String
             +makeSound() void
             +eat() void
-            +sleep() void
-            
+            +sleep() void            
         }
+        
         class Dog{
             +Animal.Dog(String name,int age)
             +makeSound() void           
