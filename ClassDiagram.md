@@ -30,8 +30,9 @@
         Animal <|-- Cat
         
         class Zoo{
-            +feedAnimal(Animal animal)
-            +playWithAnimal(Animal animal)
+            -List<Animal> animals
+            +addAnimal(Animal animal)
+            +getAnimal() List<Animal>
             +checkAnimal(Animal animal)             
         }
         Zoo ..> Animal
